@@ -1,0 +1,710 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 10px; 
+    width: 100%;
+  }
+  .header {
+    background-image: url(./images/du_lịch.jpg); 
+    background-size: cover; 
+    background-position: center; 
+    width: 100%;
+    text-align: center;
+    width: 100%;
+
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav_logo img {
+    width: 150px;
+  }
+  
+  .nav_items {
+    list-style: none;
+    display: flex;
+    border: 2px solid #aaaaaa;
+    border-radius: 6px;
+  }
+  
+  .nav_item a{
+    margin-right: 30px;
+    font-size: 30px;
+   
+  }
+  
+  .nav_link {
+    color: rgb(10, 9, 9);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .nav_link:hover {
+    color: #d9d9d9;
+    text-decoration: none;
+  }
+  .button {
+    padding: 10px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .nav>button {
+    margin-right: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .button:active {
+    transform: scale(0.98);
+  }
+  #welcome-message {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-right: 30px;
+  }  
+  /* Home */
+  .home::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+  }
+  .home.show::before {
+    opacity: 1;
+    pointer-events: auto;
+  } 
+  /* From */
+  .form_container {
+    position: fixed;
+    max-width: 320px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    z-index: 101;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-out;
+   
+  }
+  .home.show .form_container {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .signup_form {
+    display: none;
+  }
+  .form_container.active .signup_form {
+    display: block;
+  }
+  .form_container.active .login_form {
+    display: none;
+  }
+  .form_close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #0b0217;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .form_container h2 {
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+  }
+  .input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+  }
+  .input_box input {
+    height: 100%;
+    width: 75%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+  }
+  .input_box input:focus {
+    border-color: #7d2ae8;
+  }
+  .input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #707070;
+  }
+  .input_box i.email,
+  .input_box i.password {
+    left: 0;
+  }
+  .input_box input:focus ~ i.email,
+  .input_box input:focus ~ i.password {
+    color: #7d2ae8;
+  }
+  .input_box i.pw_hide {
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  .option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .form_container a {
+    color: #7d2ae8;
+    font-size: 12px;
+  }
+  .form_container a:hover {
+    text-decoration: underline;
+  }
+  .checkbox {
+    display: flex;
+    column-gap: 8px;
+    white-space: nowrap;
+  }
+  .checkbox input {
+    accent-color: #7d2ae8;
+  }
+  .checkbox label {
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+  }
+  .form_container .button {
+    background: #7d2ae8;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  .login_signup {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  } 
+
+  /* Phần tourt */
+  .background {
+    background-image: url(./images/comboGoodPrice.aa56bfb9.png); 
+    background-size: cover; 
+    background-position: center;
+    padding: 20px;
+    
+
+  }
+  .nam-trung-bac {
+    width: 100%;
+    background-color: #9ba4ad; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: inline-block;
+    margin-bottom:20px;
+    box-sizing: border-box;
+  }
+
+.nam-trung-bac p {
+    font-family: 'Arial', sans-serif; 
+    font-size: 20px; 
+    color: #00796b; 
+    text-align: center; 
+    margin: 0; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+  .card-container,
+  .card-container_trung,
+  .card-container_bac {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+  }
+  
+  .card:hover {
+    transform: translatey(-10px);
+    z-index: 0;
+    
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card h2 {
+    margin: 10px;
+    font-size: 1.2em;
+  }
+  
+  .card p {
+    margin: 10px;
+    color: #555;
+  }
+  /* Container chứa các phần tử */
+.detail-container {
+  padding: 20px; 
+}
+
+/* Ảnh */
+.detail-container img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  width: 100%; 
+  max-width: 800px; 
+}
+
+/* Đoạn văn */
+.detail-container title content {
+  font-size: 18px;
+  color: #0c0c0c;
+  line-height: 1.6;
+  font-weight: 600;
+  max-width: 400px;
+  text-align: justify; 
+  margin: 0;
+}
+
+/* Tiêu đề */
+.detail-container h1 {
+  margin: 20px;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #333;
+}
+  .back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  .image-gallery {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .image-gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .image-gallery img:hover {
+    transform: scale(2);
+  }
+  /* combo */
+   .combo{
+    align-items: center; 
+    height: 100%; 
+    margin-top: 30px;
+} 
+  .combo p {
+    text-align: center; 
+    font-size: 18px;
+   }  
+   .combo p:first-of-type {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    color: #194a89; 
+    margin-bottom: 10px; 
+  }
+  .underline {
+    width: 200px; 
+    height: 3px; 
+    background-color: #000; 
+    margin: 10px auto; 
+  }
+  .combo-tour {
+    display: flex;
+    flex-wrap: wrap;  /* This ensures they wrap if the screen size is too small */
+    /* justify-content: space-between;  Distribute the items evenly */
+    justify-content: center;
+    gap: 10px;  /* Add space between the items */
+    margin: 30px;
+  }
+  
+  .tour-container {
+    flex: 1 1 20%;  /* Each container takes up 22% of the width, with some flexibility */
+    max-width: 24%;  /* Max width ensures the containers do not stretch too much */
+  }
+  
+  .tour-card {
+    width: 300px; /* Kích thước của thẻ */
+    height: 300px; /* Chiều cao thẻ */
+    perspective: 1000px; /* Tạo chiều sâu cho hiệu ứng 3D */
+    cursor: pointer;
+  }
+  
+  .tour-card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease; /* Thêm hiệu ứng mượt mà */
+    transform-style: preserve-3d; /* Duy trì hiệu ứng 3D */
+    position: relative;
+  }
+  
+  .tour-card:hover .tour-card-inner {
+    transform: rotateY(180deg); /* Xoay thẻ khi hover */
+  }
+  
+  .tour-card-front,
+  .tour-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ẩn mặt sau khi xoay */
+    border-radius: 10px; /* Viền bo góc cho thẻ */
+    box-sizing: border-box;
+  }
+  
+  .tour-card-front {
+    background-color: #ffffff; /* Màu nền của mặt trước */
+    border: 1px solid #ddd; /* Viền mờ */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho thẻ */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease; /* Thêm hiệu ứng đổ bóng khi hover */
+  }
+  
+  .tour-card-front:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+  }
+  
+  .tour-card-back {
+    background-color: #f0f0f0; /* Màu nền mặt sau */
+    border: 1px solid #ddd; /* Viền mờ cho mặt sau */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho mặt sau */
+    transform: rotateY(180deg); /* Mặt sau xoay 180 độ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tour-location {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9c3036; /* Màu sắc cho địa điểm */
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .tour-details p {
+    margin: 10px 0;
+    line-height: 2;
+    font-size: 16px;
+    color: #7f8c8d; /* Màu chữ nhẹ nhàng */
+  }
+  
+  .tour-details strong {
+    color: #2c3e50; /* Màu chữ đậm cho các thông tin quan trọng */
+  }
+  
+  .tour-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ ảnh trong thẻ */
+    border-radius: 8px; /* Viền bo góc cho ảnh */
+  }
+  
+  /* Thêm hiệu ứng hover cho container */
+  .tour-container {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tour-container:hover {
+    transform: scale(1.02); /* Tăng kích thước container nhẹ khi hover */
+  }
+  
+  /* about */
+  
+.button {
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  color:white;
+  background-color: hsl(349 100% 95%);
+  padding: 0.75em 1.25em;
+  border: 0;
+  border-radius: 1.25rem;
+}
+
+.card-about{
+  min-height: 400px;
+  text-align: center;
+  width: 250px;
+  position: relative;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  perspective: 900px;
+  transition: 0.3s;
+  scroll-snap-align: start;
+  margin-right: 20px;
+}
+
+
+.card-about .card-img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.card-about .card-glow-container {
+  position: absolute;
+  box-sizing: border-box;
+  /*border: 2px solid red;*/
+  inset: calc(100px / -2);
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.card-glow-line,
+.card-glow-blur{
+  stroke: blue;
+  stroke-width: 5px;
+  stroke-dasharray: 20px 30px;
+  rx: 0.75rem;
+  x: 50px;
+  y: 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+  fill: transparent;
+}
+
+.card-glow-line {
+  stroke: white;
+  stroke-width: 4px;
+}
+
+.card-glow-blur {
+  filter: blur(5px);
+  stroke: white;
+  stroke-width: 5px;
+}
+
+.card-about:is(:hover, :focus) :is(.card-glow-line, .card-glow-blur)  {
+  stroke-dashoffset: -55px; 
+  transition: stroke-dashoffset 1000ms ease-in;
+}
+
+.card-about:is(:hover, :focus) .card-glow-container{
+  animation: glow-visibility 1100ms;
+}
+
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 2rem;
+  row-gap: 2rem;
+}
+
+#aboutUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+#aboutUs h2 {
+  margin: 1rem;
+}
+
+
+.about-us .card-glow-effect {
+  transition: 0.5s;
+  height: 100%;
+  border-radius: 1.25rem;
+}
+
+.card:hover .card-glow-effect {
+  filter: blur(1.2px);
+}
+
+.about-us > .card-about .card-more-info {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  opacity: 1;
+  transform: translate(-50%, 0) scale(0);
+}
+
+
+.card-about.inactive {
+  filter: grayscale(100%);
+}
+
+.card-about.inactive.active {
+  filter: grayscale(0%);
+  z-index: 1;
+}
+
+.card-about:hover .card-content {
+  opacity: 0;
+}
+
+.card-about:hover .card-more-info {
+  bottom: 20px;
+  opacity: 1;
+  transform: translate(-50%, -10%) scale(1)
+}
+
+.card-about:hover .card-glow-effect {
+  z-index: 2;
+  transform: perspective(900px) translateY(-5%) rotateX(20deg) translateZ(0);
+    box-shadow: 2px 10px 20px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 10px 20px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 10px 20px -8px rgba(0, 0, 0, 0.75);
+}
+
+.about-us .card-content {
+  position: absolute;
+  bottom:0;
+  border-radius: 0.75rem;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  backdrop-filter: blur(3px);
+  font-size: 1.2rem;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.about-us .card-content .card-title {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.about-us .card-content .card-text {
+  margin: 0 0 2.2rem;
+  font-size: 1.6rem;
+}
+
+.member {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card-about:hover .member
+{
+  opacity: 1;
+  transform: translate3d(0, -30%, 100px);
+  z-index: 3;
+}
+
+
+@keyframes glow-visibility {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 643px) {
+  .about-us {
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+@media screen and (min-width: 643px) {
+  .about-us {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media screen and (min-width: 864px) {
+  .about-us {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .about-us {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+ 

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh sách các địa điểm du lịch</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-6.7.2-web/css/all.min.css">
+</head>
+<body>
+  <!-- Bùi Ngọc Ninh -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav_logo">
+        <img src="./images/logo.png" alt="">
+      </a>
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="#home" class="nav_link">Home</a>
+          <a href="#card-container" class="nav_link">Tours</a>
+          <a href="#aboutUs" class="nav_link">Abouts</a>
+          <a href="#footer-container" class="nav_link">Contact</a>
+        </li>
+      </ul>
+      <button class="button" id="form-open">Login</button>
+      <span id="welcome-message" style="display: none;">Chào bạn!</span>
+    </nav>
+  </header>
+  <!-- Home -->
+  <section class="home">
+    <div class="form_container">
+      <i class="fa-solid fa-xmark form_close"></i>
+      
+      <!-- Login From -->
+      <div class="form login_form">
+        <form action="#">
+          <h2>Login</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Enter your email" required />
+            <i class="fa-solid fa-envelope email"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Enter your password" required />
+            <i class="fa-solid fa-lock password"></i>
+            <i class="fa-solid fa-eye pw_hide"></i>
+          </div>
+          <div class="option_field">
+            <span class="checkbox">
+              <input type="checkbox" id="check" />
+              <label for="check">Remember me</label>
+            </span>
+            <a href="#" class="forgot_pw">Forgot password?</a>
+          </div>
+          <button class="button">Login Now</button>
+          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+        </form>
+      </div>
+      <!-- Signup From -->
+      <div class="form signup_form">
+        <form action="#">
+          <h2>Signup</h2>
+          <div class="input_box">
+            <input type="email" placeholder="Enter your email" required />
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Create password" required />
+            <i class="fa-solid fa-lock password"></i>
+            <i class="fa-solid fa-eye pw_hide"></i>
+          </div>
+          <div class="input_box">
+            <input type="password" placeholder="Confirm password" required />
+            <i class="fa-solid fa-lock password"></i>
+            <i class="fa-solid fa-eye pw_hide"></i>
+          </div>
+          <button class="button">Signup Now</button>
+          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="background">
+    <div class="nam-trung-bac"><p>Miền Nam</p></div>
+    <div id="card-container" class="card-container"></div>
+    <div class="nam-trung-bac"><p>Miền Trung</p></div>
+    <div id="card-container_trung" class="card-container_trung"></div>
+    <div class="nam-trung-bac"> <p>Miền Bắc</p> </div>
+    <div id="card-container_bac" class="card-container_bac"></div>
+    <div class="combo">
+      <p>COMBO GIÁ TỐT NHẤT</p>
+      <div class="underline"></div>
+      <p>Với sự hợp tác giảm giá ưu đãi cùng hệ thống đối tác lớn, chúng tôi tự tin mang đến cho quý khách combo vé máy bay và khách sạn với giá tốt nhất!</p>
+    </div>
+    <div class="combo-tour">
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - PHÚ QUỐC</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> ABC</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn A</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>3.790.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/phu_quoc_4.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - HỘI AN</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> HCM-HA</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn HA</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>15.800.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/hoi_an_5.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - VŨNG TÀU</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> HCM-VT</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn VT</p>
+                <p><strong>Phương tiện:</strong> Xe du lịch</p>
+                <p><strong>Giá từ:</strong>1.790.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/vung_tau_2.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - ĐÀ LẠT</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> HCM-DL</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn DL</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>5.250.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/da_lat_4.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="combo-tour">
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - BUÔN MÊ THUỘT</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> HCM-BMT</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn B</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>6.790.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/buon_me_thuot_5.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - HUẾ</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> TPHCM-H</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn H</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>8.990.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/hue_5.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">BÌNH DƯƠNG - HÀ NỘI</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> BD-HN</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn BD</p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>10.390.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/ha_noi_3.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tour-container">
+        <div class="tour-card">
+          <div class="tour-card-inner">
+            <div class="tour-card-front">
+              <div class="tour-location">
+                <span class="location">TP. HỒ CHÍ MINH - HÀ GIANG</span>
+              </div>
+              <div class="tour-details">
+                <p><strong>Mã tour:</strong> SG-HG</p>
+                <p><strong>Khởi hành:</strong> 02/03/2025</p>
+                <p><strong>Khách sạn:</strong> Khách sạn <HGroup></HGroup></p>
+                <p><strong>Phương tiện:</strong> Máy bay</p>
+                <p><strong>Giá từ:</strong>25.300.000 đ/Khách</p>
+              </div>
+            </div>
+            <!-- hiển thị hình ảnh mặt sau của combo -->
+            <div class="tour-card-back">
+              <img src="./images/ha_giang_4.jpg" alt="Hình ảnh tour" class="tour-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="aboutUs">
+      <h2>Về chúng tôi</h2>
+      <h2>Du lịch ba miền Bắc, Trung, Nam – Khám phá vẻ đẹp đa dạng của Việt Nam</h2>
+      
+      <div class="content">
+          <p>Việt Nam là một đất nước nổi bật với vẻ đẹp phong phú và đa dạng qua ba miền Bắc, Trung, Nam. <strong>Miền Bắc</strong> với thủ đô Hà Nội cổ kính, mang đậm dấu ấn lịch sử và văn hóa, nổi bật với những di tích lịch sử lâu đời và danh lam thắng cảnh thiên nhiên như Vịnh Hạ Long, Sapa mờ sương. <strong>Miền Trung</strong> là vùng đất của những bãi biển tuyệt đẹp như Nha Trang, Hội An – nơi hội tụ những giá trị văn hóa, lịch sử và ẩm thực đặc sắc. Bên cạnh đó, miền Trung còn nổi bật với những di tích cổ kính như Huế, nơi lưu giữ nhiều giá trị văn hóa truyền thống. <strong>Miền Nam</strong> mang đến cho du khách những trải nghiệm mới lạ, từ không gian năng động, hiện đại của TP.HCM đến vẻ đẹp yên bình của đồng bằng sông Cửu Long với những con sông, kênh rạch mênh mông và những khu chợ nổi độc đáo.</p>
+
+          <p>Mỗi miền đều có những nét đặc trưng riêng, tạo nên một bức tranh tuyệt đẹp của thiên nhiên và con người Việt Nam, hứa hẹn mang đến cho du khách những trải nghiệm không thể quên.</p>
+      </div>
+      <div class="about-us">
+        <div class="card-about">
+          <div class="card-glow-effect">
+            <img src="./images/le_thanh_tuan.jpg" alt="something" class="card-img" />
+            <div class="card-content">
+              <h5 class="card-title">Lê Thanh Tuấn</h5>
+              <p class="card-text" style="color: #ef5518">Miền Nam</p>
+            </div>
+
+            <svg class="card-glow-container">
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-blur" />
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-line" />
+            </svg>
+
+          </div>
+          <img src="./images/le_thanh_tuan_removebg.png" alt="something" class="member" />
+          <a class="card-more-info" href="about.html"><i class="fa-solid fa-info"></i></a>
+          <a href="about.html" class="card-more-info" onclick="saveSelectedMember('le_thanh_tuan')"></a>
+        </div>
+
+
+        <div class="card-about">
+          <div class="card-glow-effect">
+            <img src="./images/tran_xuan_vinh.jpg" alt="something" class="card-img" />
+            <div class="card-content">
+              <h5 class="card-title">Trần Xuân Vinh</h5>
+              <p class="card-text" style="color: #ef5518">Miền Trung</p>
+            </div>
+
+            <svg class="card-glow-container">
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-blur" />
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-line" />
+            </svg>
+
+          </div>
+          <img src="./images/tran_xuan_vinh-removebg-preview.png" alt="something" class="member" />
+          <a href="about.html" class="card-more-info" onclick="saveSelectedMember('tran_xuan_vinh')"></a>
+        </div>
+
+        <div class="card-about">
+          <div class="card-glow-effect">
+            <img src="./images/bui_ngoc_ninh.jpg" alt="something" class="card-img" />
+            <div class="card-content">
+              <h5 class="card-title">Bùi Ngọc Ninh</h5>
+              <p class="card-text" style="color: #ef5518">Miền Bắc</p>
+            </div>
+
+            <svg class="card-glow-container">
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-blur" />
+              <rect pathLength="100" stroke-linecap="round" class="card-glow-line" />
+            </svg>
+            
+          </div>
+          <img src="./images/bui_ngoc_ninh-removebg-preview.png" alt="something" class="member" />
+          <a href="about.html" class="card-more-info" onclick="saveSelectedMember('bui_ngoc_ninh')"></a>      </div>
+        
+      </div>
+    </section>
+  </div>
+  <div id="footer-container"></div>
+<script>
+  fetch("footer.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
