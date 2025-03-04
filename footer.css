@@ -25,7 +25,11 @@ html, body {
   .footer-column {
     width: 30%;
   }
-  
+  .footer-column>a{
+    font-size: 20px;
+    margin: 50px;
+    padding-top: 20px;
+  }
   h4 {
     color: #f1c40f;
     margin-bottom: 10px;

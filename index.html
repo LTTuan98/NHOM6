@@ -24,61 +24,79 @@
       </ul>
       <button class="button" id="form-open">Login</button>
       <span id="welcome-message" style="display: none;">Chào bạn!</span>
+      
+      <!-- Icon mũi tên trỏ xuống (Hiện sau khi đăng nhập thành công) -->
+      <span id="dropdown-icon" style="display: none;">&#9660;</span>
+  
+      <!-- Menu dropdown -->
+      <div id="dropdown-menu" style="display: none;">
+        <a href="#" id="account-settings-btn">Cài đặt tài khoản</a>
+        <a href="#" id="logout-btn">Đăng xuất</a>
+      </div>
     </nav>
   </header>
-  <!-- Home -->
-  <section class="home">
-    <div class="form_container">
-      <i class="fa-solid fa-xmark form_close"></i>
-      
-      <!-- Login From -->
-      <div class="form login_form">
-        <form action="#">
-          <h2>Login</h2>
-          <div class="input_box">
-            <input type="email" placeholder="Enter your email" required />
-            <i class="fa-solid fa-envelope email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Enter your password" required />
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-solid fa-eye pw_hide"></i>
-          </div>
-          <div class="option_field">
-            <span class="checkbox">
-              <input type="checkbox" id="check" />
-              <label for="check">Remember me</label>
-            </span>
-            <a href="#" class="forgot_pw">Forgot password?</a>
-          </div>
-          <button class="button">Login Now</button>
-          <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
-        </form>
-      </div>
-      <!-- Signup From -->
-      <div class="form signup_form">
-        <form action="#">
-          <h2>Signup</h2>
-          <div class="input_box">
-            <input type="email" placeholder="Enter your email" required />
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Create password" required />
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-solid fa-eye pw_hide"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Confirm password" required />
-            <i class="fa-solid fa-lock password"></i>
-            <i class="fa-solid fa-eye pw_hide"></i>
-          </div>
-          <button class="button">Signup Now</button>
-          <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
-        </form>
-      </div>
+  
+
+<!-- Home -->
+<section class="home">
+  <div class="form_container">
+    <i class="fa-solid fa-xmark form_close"></i>
+
+    <!-- Login Form -->
+    <div class="form login_form">
+      <form action="#" id="login-form">
+        <h2>Login</h2>
+        <div class="input_box">
+          <input type="email" id="login-email" placeholder="Enter your email" required />
+          <i class="fa-solid fa-envelope email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="login-password" placeholder="Enter your password" required />
+          <i class="fa-solid fa-lock password"></i>
+          <i class="fa-solid fa-eye pw_hide"></i>
+        </div>
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" class="forgot_pw">Forgot password?</a>
+        </div>
+        <button class="button" id="login-now-btn" type="button">Login Now</button>
+        <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+      </form>
     </div>
-  </section>
+
+    <!-- Signup Form -->
+    <div class="form signup_form">
+      <form action="#" id="signup-form">
+        <h2>Signup</h2>
+        <div class="input_box">
+          <input type="text" id="signup-username" placeholder="Enter your username" required />
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="input_box">
+          <input type="email" id="signup-email" placeholder="Enter your email" required />
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="signup-password" placeholder="Create password" required />
+          <i class="fa-solid fa-lock password"></i>
+          <i class="fa-solid fa-eye pw_hide"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" id="signup-confirm-password" placeholder="Confirm password" required />
+          <i class="fa-solid fa-lock password"></i>
+          <i class="fa-solid fa-eye pw_hide"></i>
+        </div>
+        <button class="button" id="signup-now-btn" type="button">Signup Now</button>
+        <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
   <div class="background">
     <div class="nam-trung-bac"><p>Miền Nam</p></div>
     <div id="card-container" class="card-container"></div>
@@ -339,6 +357,7 @@
       </div>
     </section>
   </div>
+  <button id="back-to-top" class="back-to-top-btn" title="Lên đầu trang">&#8679;</button>
   <div id="footer-container"></div>
 <script>
   fetch("footer.html")
